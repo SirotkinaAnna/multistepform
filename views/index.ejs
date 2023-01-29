@@ -1,0 +1,68 @@
+<% layout('/layout/boilerplate') %>
+
+    <form action="/selectPlan" method="GET" class="needs-validation d-flex flex-column " novalidate>
+        <div class="row">
+
+            <h1 class="pt-3">Personal info</h1>
+            <p class="text-muted">Please provide your name, email address, and phone number</p>
+            <div class="mb-3">
+                <label class="form-label" for="username">Name</label>
+
+                <input class="form-control order-2" type="text" id="username" name="username" required autofocus>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback order-1">
+                    This field is required
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="email">Email Address</label>
+
+                <input class="form-control" type="email" id="email" name="email" required
+                    placeholder="e.g.stephenking@lorem.com">
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    This field is required
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="d-flex flex-row myFeedBack"> <label class="form-label" for="phone">Phone
+                        number</label>
+
+                </div>
+
+                <input class="form-control" type="text" id="phone" name="phone" required
+                    placeholder="e.g.+1 234 567 890">
+                <div class="invalid-feedback">
+                    This field is required
+                </div>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="row mt-auto">
+            <div class="col d-flex justify-content-end">
+                <button class="btn btn-primary px-4 py-2" type="submit">Next Step</button>
+            </div>
+        </div>
+
+    </form>
+
+    <script src="/validation.js">
+
+    </script>
+    <script>
+        (() => {
+            const div = document.querySelector('#first')
+            div.classList.add("circleFirst")
+            div.classList.remove('circleDiv')
+        })()
+    </script>
