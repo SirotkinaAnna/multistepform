@@ -201,4 +201,8 @@ form {
         width: 80%;
     }
 
+    form {
+        height: 70vh;
+    }
+
 }
