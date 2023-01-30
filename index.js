@@ -32,12 +32,12 @@ app.post('/total', (req, res) => {
 app.post('/addons', (req, res) => {
     const { check } = req.body;
 
-
+    console.log(check)
     res.render('addons', { total, check, selectAddon, valueAddon, value })
 })
 app.get('/addons', (req, res) => {
 
-    res.render('addons', { total, selectAddon, valueAddon, value })
+    res.render('addons', { total, selectAddon, valueAddon, value, check })
 })
 app.get('/total', (req, res) => {
     res.render('total', { total, selectAddon })

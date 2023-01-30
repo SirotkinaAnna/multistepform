@@ -21,7 +21,7 @@
                             <a href="/selectPlan">Change</a>
                         </div>
                         <p class="ms-auto fw-bold mt-auto">
-                            +$<%= total.checkbox? `${total.btnradio*10}/yr` : `${total.btnradio}/mo` %>
+                            +$<%= total.checkbox? `${parseInt(total.btnradio)*10}/yr` : `${total.btnradio}/mo` %>
                         </p>
                     </div>
                     <hr class="card-text">
@@ -36,7 +36,7 @@
                                         +$<%= valueAddon[ind-1]*10 %>/yr
                                     </p>
                                 </div>
-                                <% } } else if(!total.checkbox&&check){%>
+                                <% } } else if(!total.checkbox){%>
                                     <% for(let ind of check){ %>
                                         <% sum+=parseInt(valueAddon[ind-1]) %>
                                             <div class="d-flex flex-row">
@@ -44,7 +44,7 @@
                                                     <%= selectAddon[ind-1] %>
                                                 </p>
                                                 <p class="ms-auto">
-                                                    +$<%=valueAddon[ind-1] %>/mo
+                                                    +$<%= valueAddon[ind-1] %>/mo
                                                 </p>
                                             </div>
                                             <% } } %>
@@ -52,7 +52,7 @@
         </div>
 
         <% if(total.checkbox){ %>
-            <% sum+=parseInt(total.btnradio*10) %>
+            <% sum+=parseInt(total.btnradio)*10 %>
                 <% } else{ %>
                     <% sum+=parseInt(total.btnradio) %>
                         <% } %>
