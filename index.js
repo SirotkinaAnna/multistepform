@@ -23,7 +23,7 @@ app.get('/selectPlan', (req, res) => {
 
     res.render("selectPlan", { value });
 })
-app.post('/total', (req, res) => {
+app.post('/total', async (req, res) => {
     total = req.body;
     console.log(total);
     res.render('total', { total, selectAddon })
@@ -35,7 +35,7 @@ app.post('/addons', (req, res) => {
 
     res.render('addons', { total, check, selectAddon, valueAddon, value })
 })
-app.get('/addons', (req, res) => {
+app.get('/addons', async (req, res) => {
 
     res.render('addons', { total, selectAddon, valueAddon, value })
 })
