@@ -49,6 +49,10 @@ form {
 
 }
 
+.myBorder {
+    width: 80%;
+}
+
 .btn-light {
     background-color: white;
     --bs-btn-active-bg: #ecf4fb;
@@ -164,6 +168,11 @@ form {
         width: 100%;
         height: 172px;
 
+    }
+
+    .myBorder {
+        width: 100%;
+        ;
     }
 
     .relat {
