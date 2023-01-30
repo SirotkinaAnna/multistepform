@@ -36,7 +36,7 @@
                                         +$<%= valueAddon[ind-1]*10 %>/yr
                                     </p>
                                 </div>
-                                <% } } else if(!total.checkbox&&check){%>
+                                <% } } else if(check&&!total.checkbox){%>
                                     <% for(let ind of check){ %>
                                         <% sum+=parseInt(valueAddon[ind-1]) %>
                                             <div class="d-flex flex-row">
@@ -47,7 +47,7 @@
                                                     +$<%=valueAddon[ind-1] %>/mo
                                                 </p>
                                             </div>
-                                            <% } } %>
+                                            <% } } sum+=0;%>
             </div>
         </div>
 
