@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const ejsMate = require('ejs-mate');
-const helmet = require('helmet');
+//const helmet = require('helmet');
 
 
 // view engine setup
@@ -11,7 +11,7 @@ app.engine('ejs', ejsMate);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
-app.use(helmet());
+//app.use(helmet());
 const value = [9, 12, 15];
 const valueAddon = [1, 2, 2];
 let total = '';
@@ -24,13 +24,13 @@ app.get('/selectPlan', (req, res) => {
     res.render("selectPlan", { value });
 })
 app.post('/total', async (req, res) => {
-    total = req.body;
-    console.log(total);
+    total = await req.body;
+
     res.render('total', { total, selectAddon })
 })
 
-app.post('/addons', (req, res) => {
-    const { check } = req.body;
+app.post('/addons', async (req, res) => {
+    const { check } = await req.body;
 
 
     res.render('addons', { total, check, selectAddon, valueAddon, value })
