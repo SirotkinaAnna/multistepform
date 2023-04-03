@@ -1,6 +1,7 @@
-<% layout('/layout/boilerplate') %>
-    <div class="card my-5 w-75">
-        <img src="/assets/images/icon-thank-you.svg" class="img-fluid mx-auto" style="width: 80px;">
+import imgMy from '../../assets/images/icon-thank-you.svg'
+function ThankYouPage() {
+    return <div class="card my-5 w-75">
+        <img src={imgMy} class="img-fluid mx-auto" style={{ width: "80px" }} alt="" />
 
         <div class="card-body">
             <h1 class="card-title text-center">Thank you</h1>
@@ -12,6 +13,5 @@
                 ever need support, please feel free to email us at support@loremgaming.com.</p>
         </div>
     </div>
-    <script src="forth.js">
-
-    </script>
+}
+export default ThankYouPage;
